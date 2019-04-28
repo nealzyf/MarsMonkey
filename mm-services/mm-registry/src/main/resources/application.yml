@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: registry-service
+  profiles:
+    active: ${profile.active}
+
+server:
+  port: 8001
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 5
+    prefer-ip-address: false
+    appname: ${spring.application.name}
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:8001/eureka/

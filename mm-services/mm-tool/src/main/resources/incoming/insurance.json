@@ -1,0 +1,8 @@
+{
+  "shanghai": {
+    "pensionInsuranceRate": 8,
+    "medicalInsuranceRate": 2,
+    "housingFundRate": 7,
+    "unemploymentInsuranceRate": 0.5
+  }
+}

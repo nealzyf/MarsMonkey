@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: tool-service
+  cloud:
+    config:
+      uri: http://localhost:8002
+  profiles:
+    active: ${profile.active}
+server:
+  port: 8102
+
+

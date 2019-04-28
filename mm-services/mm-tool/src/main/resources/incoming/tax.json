@@ -1,0 +1,45 @@
+[
+  {
+    "min": 0,
+    "max": 36000,
+    "taxRate": 3,
+    "deduction": 0
+  },
+  {
+    "min": 36000,
+    "max": 144000,
+    "taxRate": 10,
+    "deduction": 2520
+  },
+  {
+    "min": 144000,
+    "max": 300000,
+    "taxRate": 20,
+    "deduction": 16920
+  },
+  {
+    "min": 300000,
+    "max": 420000,
+    "taxRate": 25,
+    "deduction": 31920
+  },
+  {
+    "min": 420000,
+    "max": 660000,
+    "taxRate": 30,
+    "deduction": 52920
+  },
+  {
+    "min": 660000,
+    "max": 960000,
+    "taxRate": 35,
+    "deduction": 85920
+  },
+  {
+    "min": 960000,
+    "max": 1000000,
+    "taxRate": 45,
+    "deduction": 181920
+  }
+]
+

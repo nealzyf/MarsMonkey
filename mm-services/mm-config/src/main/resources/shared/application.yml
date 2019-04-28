@@ -1,0 +1,56 @@
+#common part
+spring:
+  #  session:
+  #    store-type: redis
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    druid:
+      initialSize: 1
+      minIdle: 1
+      maxActive: 20
+      maxWait: 60000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: SELECT 'x'
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxPoolPreparedStatementPerConnectionSize: 20
+      filters: stat
+      stat-view-servlet:
+        enabled: true
+        url-pattern: /druid/*
+
+
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+
+mybatis:
+  configuration:
+    cacheEnabled: true
+    lazyLoadingEnabled: true
+    aggressiveLazyLoading: false
+    multipleResultSetsEnabled: true
+    useColumnLabel: true
+    useGeneratedKeys: true
+    autoMappingBehavior: FULL
+    defaultExecutorType: SIMPLE
+    defaultStatementTimeout: 25000
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8001/eureka/
+
+---
+
+spring:
+  profiles: test
+  datasource:
+    url: jdbc:mysql://localhost:3306/test-db
+    username: test-user
+    password: 123456

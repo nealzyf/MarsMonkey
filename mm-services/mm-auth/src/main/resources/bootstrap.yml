@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: user-service
+  cloud:
+    config:
+      uri: http://localhost:8002
+  profiles:
+    active: ${profile.active}
+
+  redis:
+    host: 127.0.0.1
+
+
+server:
+  port: 8104
+
+
+
+
+logging.level.org.springframework.security: DEBUG

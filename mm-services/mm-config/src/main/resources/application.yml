@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/shared
+  profiles:
+    active: native , ${profile.active}
+
+server:
+  port: 8002
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8001/eureka/
+      
+
+
+
+
+
+
+
+

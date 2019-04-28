@@ -1,0 +1,64 @@
+server:
+  port: 8103
+
+zuul:
+  ignoredServices: '*'
+  host:
+  # timeout setting for uri route
+    connect-timeout-millis: 30000
+    socket-timeout-millis: 30000
+
+  routes:
+    order:
+      path: /order/**
+      serviceId: order-service
+      sensitiveHeaders:
+    finance:
+      path: /finance/**
+      serviceId: finance-service
+      sensitiveHeaders:
+    product:
+      path: /product/**
+      serviceId: product-service
+      sensitiveHeaders:
+    auth:
+      path: /auth/**
+      serviceId: auth-service
+      sensitiveHeaders:
+    middleware:
+      path: /middleware/**
+      serviceId: middleware-service
+      sensitiveHeaders:
+    imapp:
+      path: /imapp/**
+      serviceId: imapp-service
+      sensitiveHeaders:
+    imapp-user:
+      path: /imappuser/**
+      serviceId: imapp-user-service
+      sensitiveHeaders:
+    scm:
+      path: /scm/**
+      serviceId: scm-service
+      sensitiveHeaders:
+    stock:
+      path: /stock/**
+      serviceId: stock-processing-service
+      sensitiveHeaders:
+
+
+# timeout setting for serviceId route
+ribbon:
+#  # Max number of next servers to retry (excluding the first server)
+#  MaxAutoRetries: 1
+#  # Whether all operations can be retried for this client
+#  MaxAutoRetriesNextServer: 1
+#  # Interval to refresh the server list from the source
+#  OkToRetryOnAllOperations: true
+#  # Interval to refresh the server list from the source
+#  ServerListRefreshInterval: 2000
+#  # Connect timeout used by Apache HttpClient
+  ConnectTimeout: 180000
+#  # Read timeout used by Apache HttpClient
+  ReadTimeout: 180000
+
