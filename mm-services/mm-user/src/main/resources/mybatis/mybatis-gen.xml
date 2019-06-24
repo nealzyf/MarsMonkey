@@ -18,7 +18,7 @@
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
 
-        <javaModelGenerator targetPackage="com.neal.user.dao.entity" targetProject=".">
+        <javaModelGenerator targetPackage="com.mars.monkey.user.dao.entity" targetProject=".">
             <property name="enableSubPackages" value="false"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
@@ -27,7 +27,7 @@
             <property name="enableSubPackages" value="false"/>
         </sqlMapGenerator>
 
-        <javaClientGenerator targetPackage="com.neal.user.dao.mapper" type="XMLMAPPER" targetProject=".">
+        <javaClientGenerator targetPackage="com.mars.monkey.user.dao.mapper" type="XMLMAPPER" targetProject=".">
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
 
