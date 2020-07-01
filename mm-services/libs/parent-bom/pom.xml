@@ -17,7 +17,7 @@
         <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
         <spring-boot.version>2.1.4.RELEASE</spring-boot.version>
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
-        <mysql.connector.version>5.1.39</mysql.connector.version>
+        <mysql.connector.version>8.0.16</mysql.connector.version>
         <docker.repository>nealzyf</docker.repository>
     </properties>
 
